@@ -1,0 +1,13 @@
+Integrate a full git workflow
+    - Telescope??
+    - Other options available
+    - include everything you could ever need for git
+
+File creation - better way than terminal?
+
+Look into terminal integration to nvim
+
+Finalize lsp additions
+
+Standardize window sizes
+

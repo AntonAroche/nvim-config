@@ -11,3 +11,4 @@ Finalize lsp additions
 
 Standardize window sizes
 
+Better syntax highlighting

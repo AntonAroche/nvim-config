@@ -2,13 +2,23 @@ Integrate a full git workflow
     - Telescope??
     - Other options available
     - include everything you could ever need for git
+    - fugitive might cover this
 
 File creation - better way than terminal?
-
 Look into terminal integration to nvim
-
-Finalize lsp additions
 
 Standardize window sizes
 
+Multi-line tab
+
 Better syntax highlighting
+AUTO-FIX FOR LSP
+Finalize lsp additions
+
+Clearer/transparent caret
+
+Auto commenting blocks
+
+Check for ideas in bootstrap vimrc
+
+Select multiple of the same occurance and refactor all

@@ -55,27 +55,35 @@ Plug 'KarimElghamry/vim-auto-comment'
 Plug 'mbbill/undotree'
 
 call plug#end()
+lua require("modules")
 
+" Aesthetics
 if (has("termguicolors"))
  set termguicolors
 endif
 
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme shades_of_purple
 set background=dark
+highlight ColorColumn ctermbg=none
 highlight Normal guibg=none
 highlight NonText guibg=none
+highlight clear LineNr
+highlight clear SignColumn
 
-lua require("modules")
+" Mappings
 let mapleader = " "
-
+nnoremap <leader>gh :diffget //3<CR>
+nnoremap <leader>gu :diffget //2<CR>
+nnoremap <leader>gs :G<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpush<CR>
 noremap <leader>go Go
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
-nnoremap <leader>u :UndotreeToggle<CR>
 
+nnoremap <leader>u :UndotreeToggle<CR>
 vnoremap <silent><C-S-a> :AutoBlockComment<CR>
 nnoremap <silent><C-S-a> :AutoBlockComment<CR>
 

@@ -19,7 +19,7 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set scrolloff=8
-set colorcolumn=80
+set colorcolumn=120
 set signcolumn=yes
 set updatetime=50
 set splitright
@@ -63,6 +63,8 @@ endif
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme shades_of_purple
 set background=dark
+highlight Normal guibg=none
+highlight NonText guibg=none
 
 lua require("modules")
 let mapleader = " "

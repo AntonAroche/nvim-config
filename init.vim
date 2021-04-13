@@ -19,7 +19,7 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set scrolloff=8
-set colorcolumn=120
+set colorcolumn=80
 set signcolumn=yes
 set updatetime=50
 set splitright
@@ -72,12 +72,15 @@ highlight clear SignColumn
 
 " Mappings
 let mapleader = " "
-nnoremap <leader>gh :diffget //3<CR>
-nnoremap <leader>gu :diffget //2<CR>
+nnoremap <leader>go Go
+nnoremap <leader>ggo ggO
+
 nnoremap <leader>gs :G<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gp :Gpush<CR>
-noremap <leader>go Go
+nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gh :diffget //3<CR>
+nnoremap <leader>gf :diffget //2<CR>
+
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l

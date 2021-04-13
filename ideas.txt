@@ -1,17 +1,21 @@
+Core features needed
 Integrate a full git workflow
     - Fugitive, gitgutter, anything else needed?
     - include everything you could ever need for git
 
-File creation - better way than terminal?
-Look into terminal integration to nvim
-Integrate tmux and i3 workflow
-Clearer/transparent caret - in terminal
-
+Better syntax highlighting
+Finalize lsp additions, such as jump to file
 Select multiple of the same occurance and refactor all
 
-Better syntax highlighting
-AUTO-FIX FOR LSP / in general
-Tab for autofix
-Finalize lsp additions, such as jump to file
+Telescope
+    - Ctrl c to exit after entering a search
+    -Theming and icons
+    -finalize additions, look for shortcuts
 
-Telescope - Ctrl c to exit after entering a search
+Figure out buffers VS tmux copy/paste buffers for optimal split nvim action
+    -make y paste into clipboard?
+
+Extra features _______
+Look for new tmux plugins
+Look for new nvim plugins
+New keybindings

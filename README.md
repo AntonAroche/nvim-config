@@ -1,2 +1,1 @@
-My complete config for nvim. Looking to create a lightweight exprience
-with some IDE features. Currently a work in progress
+My complete config for nvim. Uses the colemak layout, and aims for ergonomics and functionality.

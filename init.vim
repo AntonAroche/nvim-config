@@ -25,6 +25,7 @@ set updatetime=50
 set splitright
 set splitbelow
 
+let g:polyglot_disabled = ['sensible']
 call plug#begin('~/.vim/plugged')
 "Aesthetic
 Plug 'Rigellute/shades-of-purple.vim'
@@ -46,7 +47,7 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'sbdchd/neoformat'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'leafgarland/typescript-vim'
-Plug 'jelera/vim-javascript-syntax'
+Plug 'sheerun/vim-polyglot'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -74,6 +75,28 @@ highlight clear SignColumn
 let mapleader = " "
 nnoremap <leader>go Go
 nnoremap <leader>ggo ggO
+noremap a h
+noremap r j
+noremap s k
+noremap t l
+
+noremap A H
+noremap R J
+noremap S K
+noremap T L
+
+noremap h t
+noremap k r
+noremap j s
+noremap , a
+
+noremap H T
+noremap K R
+noremap J S
+nnoremap < A
+
+" j/J available
+noremap U <C-r>
 
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :Git commit<CR>
@@ -81,10 +104,10 @@ nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gh :diffget //3<CR>
 nnoremap <leader>gf :diffget //2<CR>
 
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
+noremap <C-r> <C-w>j
+noremap <C-s> <C-w>k
+noremap <C-t> <C-w>l
+noremap <C-a> <C-w>h
 
 nnoremap <leader>u :UndotreeToggle<CR>
 vnoremap <silent><C-S-a> :AutoBlockComment<CR>

@@ -1,6 +1,7 @@
 Integrate a full git workflow
     - Fugitive, gitgutter, anything else needed
     - include everything you could ever need for git
+    - fix fugitive to work properly with colemak
 
 Finalize lsp additions, such as jump to file
 Select multiple of the same occurance and refactor all
@@ -18,3 +19,5 @@ Figure out buffers VS tmux copy/paste buffers for optimal split nvim action
     -make y paste into clipboard?
 
 Add startup menu
+
+Remove highlighting cursor or change color

@@ -73,13 +73,11 @@ highlight clear SignColumn
 
 " Mappings
 let mapleader = " "
-nnoremap <leader>go Go
-nnoremap <leader>ggo ggO
+" Colemak mappings
 noremap a h
 noremap r j
 noremap s k
 noremap t l
-
 noremap A H
 noremap R J
 noremap S K
@@ -88,26 +86,42 @@ noremap T L
 noremap h t
 noremap k r
 noremap j s
-noremap , a
-
+noremap l a
 noremap H T
 noremap K R
 noremap J S
-nnoremap < A
-
-" j/J available
+nnoremap L A
 noremap U <C-r>
 
+" Window swap
+noremap <C-r> <C-w>j
+noremap <C-s> <C-w>k
+noremap <C-t> <C-w>l
+noremap <C-a> <C-w>h
+
+" Window resize
+noremap <leader>s :resize +5<CR>
+noremap <leader>r :resize -5<CR>
+noremap <leader>a :vertical:resize -5<CR>
+noremap <leader>t :vertical:resize +5<CR>
+
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" replace currently selected text with default register without yanking it
+vnoremap <leader>p "_dP
+
+" Go shorthand
+nnoremap <leader>go Go
+nnoremap <leader>ggo ggO
+
+" Fugitive git commands
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gh :diffget //3<CR>
 nnoremap <leader>gf :diffget //2<CR>
-
-noremap <C-r> <C-w>j
-noremap <C-s> <C-w>k
-noremap <C-t> <C-w>l
-noremap <C-a> <C-w>h
 
 nnoremap <leader>u :UndotreeToggle<CR>
 vnoremap <silent><C-S-a> :AutoBlockComment<CR>

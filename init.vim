@@ -74,23 +74,6 @@ highlight clear SignColumn
 " Mappings
 let mapleader = " "
 " Colemak mappings
-noremap a h
-noremap r j
-noremap s k
-noremap t l
-noremap A H
-noremap R J
-noremap S K
-noremap T L
-
-noremap h t
-noremap k r
-noremap j s
-noremap l a
-noremap H T
-noremap K R
-noremap J S
-nnoremap L A
 noremap U <C-r>
 
 " Window swap

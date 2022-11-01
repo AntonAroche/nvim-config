@@ -7,13 +7,12 @@ Finalize lsp additions, such as jump to file
 Select multiple of the same occurance and refactor all
 Auto replace ( with [, {, auto delete 2 brackets
 Python auto-format?
+Trigger to show errors displayed
 
 Telescope
     - Ctrl c to exit after entering a search
     -Theming and icons
     -finalize additions, look for shortcuts
-
-Theming - fix weird airline git icons
 
 Figure out buffers VS tmux copy/paste buffers for optimal split nvim action
     -make y paste into clipboard?
@@ -21,3 +20,7 @@ Figure out buffers VS tmux copy/paste buffers for optimal split nvim action
 Add startup menu
 
 Remove highlighting cursor or change color
+
+
+Rewrite for improved keyboard layout
+

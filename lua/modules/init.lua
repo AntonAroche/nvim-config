@@ -1,2 +1,3 @@
-require("modules.telescope")
-require("modules.lsp")
+require("modules.remap")
+require("modules.set")
+require("modules.packer")

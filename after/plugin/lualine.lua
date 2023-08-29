@@ -33,11 +33,12 @@ require('lualine').setup {
       'filetype',
       colored = true,
       icon_only = true,
-      icon = { 'X', align = 'right' },
+      icor = { 'X', align = 'right' },
     } },
     lualine_y = { {
       'diagnostics',
-      colored = false,
+      colored = true,
+      sections = { 'error', 'warn', 'info' },
       always_visible = true,
     } },
     lualine_z = { 'location' }

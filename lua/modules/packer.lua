@@ -34,12 +34,15 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('terrortylor/nvim-comment')
   use('f-person/git-blame.nvim')
-  use {'kevinhwang91/nvim-bqf'}
+  use('kevinhwang91/nvim-bqf')
+  use('lewis6991/gitsigns.nvim')
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua' -- recommended if need floating window support
   use({
     'Wansmer/treesj',
     requires = { 'nvim-treesitter' },

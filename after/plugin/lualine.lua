@@ -8,6 +8,7 @@ require('lualine').setup {
       statusline = {},
       winbar = {},
     },
+    theme = 'auto',
     ignore_focus = {},
     always_divide_middle = true,
     globalstatus = false,
@@ -41,7 +42,7 @@ require('lualine').setup {
       sections = { 'error', 'warn', 'info' },
       always_visible = true,
     } },
-    lualine_z = { 'location' }
+    lualine_z = { 'progress', 'location' }
   },
   inactive_sections = {
     lualine_a = {},

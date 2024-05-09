@@ -13,6 +13,19 @@ return require('packer').startup(function(use)
     end
   })
 
+  use { 'akinsho/git-conflict.nvim', tag = "*", config = function()
+    require('git-conflict').setup({
+      default_mappings = {
+        ours = 'co',
+        theirs = 'ct',
+        none = 'c0',
+        both = 'cb',
+        next = 'cn',
+        prev = 'cp',
+      },
+    })
+  end }
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     requires = { { 'nvim-lua/plenary.nvim' } }
@@ -41,16 +54,27 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use {
+    "AckslD/nvim-neoclip.lua",
+    requires = {
+      { 'nvim-telescope/telescope.nvim' },
+    },
+    config = function()
+      require('neoclip').setup()
+    end,
+  }
+
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua' -- recommended if need floating window support
-  use({
-    'Wansmer/treesj',
-    requires = { 'nvim-treesitter' },
-    config = function()
-      require('treesj').setup({ use_default_keymaps = false })
-    end,
-  })
-  vim.keymap.set('n', '<leader>z', require('treesj').toggle)
+  -- if splitting blocks is needed
+  -- use({
+  --   'Wansmer/treesj',
+  --   requires = { 'nvim-treesitter' },
+  --   config = function()
+  --     require('treesj').setup({ use_default_keymaps = false })
+  --   end,
+  -- })
+  -- vim.keymap.set('n', '<leader>z', require('treesj').toggle)
 
   use {
     "VonHeikemen/lsp-zero.nvim",
@@ -72,4 +96,11 @@ return require('packer').startup(function(use)
       { 'L3MON4D3/LuaSnip' },     -- Required
     }
   }
+  use("ray-x/lsp_signature.nvim")
+  use({
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  })
 end)

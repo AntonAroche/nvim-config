@@ -2,10 +2,16 @@ local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>s', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>ggs', function()
-  builtin.grep_string({ search = vim.fn.input("Grep > ") });
-end)
+vim.keymap.set('n', '<C-s>', builtin.live_grep, {})
+vim.keymap.set("n", "<leader>s", require("telescope.builtin").resume, {
+  noremap = true,
+  silent = true,
+  desc = "Resume",
+})
+
+-- vim.keymap.set('n', '<leader>ggs', function()
+--   builtin.grep_string({ search = vim.fn.input("Grep > ") });
+-- end)
 
 vim.g.theme_switcher_loaded = true
 
@@ -41,6 +47,7 @@ local options = {
       height = 0.80,
       preview_cutoff = 120,
     },
+    dynamic_preview_title = true,
     file_sorter = require("telescope.sorters").get_fuzzy_file,
     file_ignore_patterns = { "node_modules" },
     generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
@@ -63,6 +70,7 @@ local options = {
   extensions_list = { "themes", "terms" },
 }
 
+vim.keymap.set('n', '<leader>z', require('telescope').extensions.neoclip.default, {})
 -- check for any override
 telescope.setup(options)
 

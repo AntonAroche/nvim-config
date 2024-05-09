@@ -10,4 +10,4 @@ vim.keymap.set("n", "<leader>i", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<leader>h", function() ui.nav_file(4) end)
 vim.keymap.set("n", "<leader>,", function() ui.nav_file(5) end)
 vim.keymap.set("n", "<leader>.", function() ui.nav_file(6) end)
-
+vim.keymap.set("n", "<leader>l", function() ui.nav_file(7) end)

@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+  vim.cmd("so")
 end)
 
 -- Autosave
@@ -30,6 +30,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- paste without replacing buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+-- TODO fix for d
 
 -- yank into clipboard with leader y
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
@@ -47,27 +48,25 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-vim.keymap.set("n", "<leader><C-g>", "<cmd>GitBlameToggle<CR>")
+vim.keymap.set("n", "<leader><C-g>", "<cmd>GitBlameOpenCommitURL<CR>")
 
 -- leader r to replace word on character
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>w", ":wa<CR>")
-
 --Colemak
-vim.keymap.set({ "n", "v" }, "a", "h")
-vim.keymap.set({ "n", "v" }, "h", "a")
-vim.keymap.set({ "n", "v" }, "j", "r")
-vim.keymap.set({ "n", "v" }, "r", "j")
-vim.keymap.set({ "n", "v" }, "k", "s")
-vim.keymap.set({ "n", "v" }, "s", "k")
-vim.keymap.set({ "n", "v" }, "l", "t")
-vim.keymap.set({ "n", "v" }, "t", "l")
-vim.keymap.set({ "n", "v" }, "A", "H")
-vim.keymap.set({ "n", "v" }, "H", "A")
-vim.keymap.set({ "n", "v" }, "K", "S")
-vim.keymap.set({ "n", "v" }, "L", "T")
-vim.keymap.set({ "n", "v" }, "T", "L")
+vim.keymap.set("n", "a", "h")
+vim.keymap.set("n", "h", "a")
+vim.keymap.set({"n", "v"}, "j", "r")
+vim.keymap.set({"n", "v"}, "r", "j")
+vim.keymap.set({"n", "v"}, "k", "s")
+vim.keymap.set({"n", "v"}, "s", "k")
+vim.keymap.set("n", "l", "t")
+vim.keymap.set("n", "t", "l")
+vim.keymap.set("n", "A", "H")
+vim.keymap.set("n", "H", "A")
+vim.keymap.set("n", "K", "S")
+vim.keymap.set("n", "L", "T")
+vim.keymap.set("n", "T", "L")
 vim.keymap.set("n", "R", "J")
 vim.keymap.set("n", "S", "K")

@@ -1,4 +1,6 @@
-vim.cmd[[highlight Visual ctermbg=0 guibg=#4d4d4d]]
+vim.cmd [[highlight Visual ctermbg=0 guibg=#4d4d4d]]
+vim.cmd('colorscheme darcula-solid')
+vim.cmd('set termguicolors')
 
 local links = {
   ['@lsp.type.namespace'] = '@namespace',
@@ -16,6 +18,7 @@ local links = {
   ['@lsp.type.macro'] = '@macro',
   ['@lsp.type.decorator'] = '@function',
 }
+
 for newgroup, oldgroup in pairs(links) do
   vim.api.nvim_set_hl(0, newgroup, { link = oldgroup, default = true })
 end

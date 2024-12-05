@@ -8,6 +8,7 @@ vim.keymap.set("n", "<leader>s", require("telescope.builtin").resume, {
   silent = true,
   desc = "Resume",
 })
+vim.keymap.set('n', '<leader>q', builtin.grep_string, {})
 
 -- vim.keymap.set('n', '<leader>ggs', function()
 --   builtin.grep_string({ search = vim.fn.input("Grep > ") });
